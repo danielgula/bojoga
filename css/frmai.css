@@ -1,0 +1,9 @@
+label,
+.grupoBotoesCinza {
+    text-align: center !important;
+    display: block;
+}
+
+.div-dados {
+    background-color: gray;
+}
