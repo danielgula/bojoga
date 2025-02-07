@@ -4,6 +4,10 @@ label,
     display: block;
 }
 
+body {
+    text-align: justify;
+}
+
 .div-dados {
     background-color: gray;
 }
