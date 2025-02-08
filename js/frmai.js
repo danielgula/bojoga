@@ -92,6 +92,7 @@ document.getElementById("bt_gerar").style.display = "none";
             complete: function() {
                 Swal.close();
                 preencheCampos();
+				delXXs()
             }
         });
 
@@ -419,4 +420,21 @@ document.getElementById("bt_gerar").style.display = "none";
         document.getElementById('ck_taxonomia').checked = false
         document.getElementById('ck_jogadores').checked = false
         document.getElementById('ck_links_de_referencia').checked = false
+    }
+	
+    function removeXX(id) {
+    	let str = document.getElementById(id).innerText.toString().replace(" XX_INICIO", "");
+        str =  str.replace(/\b XX_INICIO\b/g, '');
+    	str =  str.replace(/\bXX_INICIO\b/g, '');
+    	str =  str.replace(/\b XX_FIM\b/g, '');
+    	str =  str.replace(/\bXX_FIM\b/g, '');
+    	document.getElementById(id).innerText = str
+    }
+    
+    function delXXs(){
+        removeXX('historico')
+        removeXX('o_jogo')
+        removeXX('mercado')
+        removeXX('curiosidades')
+        removeXX('resumo')
     }
