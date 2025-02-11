@@ -136,6 +136,8 @@ if(isset($_POST["links_de_referencia"])){
 //troca o XX_INICIO/FIM por <p> e </p>, usado para sanar problemas no get.php
 $postagem = str_replace("XX_INICIO","<p>",$postagem);  
 $postagem = str_replace("XX_FIM","</p>",$postagem);
+$resumo = str_replace("XX_FIM","</p>",$resumo);
+$resumo = str_replace("XX_INICIO","</p>",$resumo);
 
 $postagemTratada = $postagem;
 
